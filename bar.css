@@ -1,0 +1,28 @@
+.button-panel {
+  position: fixed; /* Keep it fixed on the left side */
+  left: 0; /* Position it at the left edge */
+  top: 0; /* Position it at the top */
+  bottom: 0; /* Make it span the entire height */
+  width: 150px; /* Set the width of the panel */
+  background-color: #000000; /* Set a background color */
+  display: flex; /* Allow buttons to stack vertically */
+  flex-direction: column; /* Align buttons vertically */
+  justify-content: space-between; /* Distribute buttons evenly */
+  align-items: center; /* Center buttons horizontally */
+}
+.button-panel button {
+  /* Style for the buttons inside the panel */
+  margin: 10px; /* Add some margin between buttons */
+  padding: 10px 20px; /* Add some padding for text */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add rounded corners */
+  background-color: #ddd; /* Set button background color */
+  cursor: pointer; /* Make it look like a clickable button */
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.button-panel button:hover {
+  /* Style for button hover */
+  background-color: #007bff;
+  /* Change background color on hover */
+}

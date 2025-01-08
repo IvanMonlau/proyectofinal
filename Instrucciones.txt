@@ -1,0 +1,19 @@
+users: id (PK), email, password, first_name, last_name, address, created_at
+products: id (PK), name, description, brand, price, category, stock, image_url, created_at
+orders: id (PK), user_id (FK), status, total_amount, created_at
+order_details: id (PK), order_id (FK), product_id (FK), quantity, price, coupons
+promotions: id (PK), product_id (FK), discount, start_date, end_date
+wishlists: id (PK), user_id (FK), product_id (FK)
+employees: id (PK), email, password, first_name, last_name, role, created_at
+returns: id (PK), order_id (FK), reason, status, created_at
+notifications: id (PK), user_id (FK), message, created_at
+Relaciones:
+
+Un usuario puede tener muchos pedidos.
+Un pedido puede tener muchos detalles de pedido.
+Un detalle de pedido pertenece a un pedido y a un producto.
+Un producto puede tener muchas promociones.
+Un producto puede estar en muchas listas de deseos.
+Un usuario puede tener muchas listas de deseos.
+Un pedido puede tener una devolución.
+Un usuario puede recibir muchas notificaciones.

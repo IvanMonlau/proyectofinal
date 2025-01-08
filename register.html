@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="register.css">
+  <link rel="icon" href="https://www.langantiques.com/university/wp-content/uploads/2019/03/WinklerIgnaz.png  ">
+
+</head>
+<body>
+  <div class="container">
+    <h1 type="h1">REGISTER</h1>
+    <form action="../database/API/employeecreation.php" method="post" id="register-form">
+      <input name="email" type="text" id="email" placeholder="Email">
+      <input name="password" type="password" id="password" placeholder="Password">
+      <input name="first_name" type="text" id="first-name" placeholder="First Name">
+      <input name="last_name" type="text" id="last-name" placeholder="Last Name">
+      <input name="role" type="text" id="role" placeholder="Role">
+      <button id="register-button" type="submit">REGISTER</button><br><br>
+      <u style="text-decoration-color: #fff;"><a href="login.html">Log in</a></u>
+    </form>
+  </div>
+  <script src="registeremployee.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #007bff;
+    margin: 0;
+    display: flex; /* Hacemos que el cuerpo sea un contenedor flex */
+    justify-content: center; /* Centramos los hijos horizontalmente */
+    align-items: center; /* Centramos los hijos verticalmente */
+    height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la viewport */
+  }
+  
+  .container {
+    display: flex;
+    width: 80%; /* Ajusta el ancho del contenedor principal si lo deseas */
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .sidebar-header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .sidebar-header img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .sidebar-menu {
+    padding: 20px;
+  }
+  
+  .sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .sidebar-menu a:hover {
+    background-color: #444;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* Center search bar elements horizontally */
+  }
+  
+  .search-bar input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    background-color: #03274e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .email-list {
+    margin-top: 20px;
+    width: 100%; /* Ensure email list takes full width of content area */
+  }
+  
+  .email {
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .email-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .email-from {
+    font-weight: bold;
+  }
+  
+  .email-subject {
+    font-weight: bold;
+  }
+  
+  .email-date {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .email-body {
+    margin-top: 10px;
+  }

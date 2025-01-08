@@ -1,0 +1,77 @@
+create table users (
+  id bigint primary key generated always as identity,
+  email text not null,
+  password text not null,
+  first_name text not null,
+  last_name text not null,
+  address text,
+  created_at timestamp with time zone default now()
+);
+
+create table products (
+  id bigint primary key generated always as identity,
+  name text not null,
+  description text,
+  brand text,
+  price numeric(10, 2) not null,
+  category text,
+  stock int not null,
+  image_url text,
+  created_at timestamp with time zone default now()
+);
+
+create table orders (
+  id bigint primary key generated always as identity,
+  user_id bigint references users (id),
+  status text not null,
+  total_amount numeric(10, 2) not null,
+  created_at timestamp with time zone default now()
+);
+
+create table order_details (
+  id bigint primary key generated always as identity,
+  order_id bigint references orders (id),
+  product_id bigint references products (id),
+  quantity int not null,
+  price numeric(10, 2) not null,
+  coupons text
+);
+
+create table promotions (
+  id bigint primary key generated always as identity,
+  product_id bigint references products (id),
+  discount numeric(5, 2) not null,
+  start_date date not null,
+  end_date date not null
+);
+
+create table wishlists (
+  id bigint primary key generated always as identity,
+  user_id bigint references users (id),
+  product_id bigint references products (id)
+);
+
+create table employees (
+  id bigint primary key generated always as identity,
+  email text not null,
+  password text not null,
+  first_name text not null,
+  last_name text not null,
+  role text not null,
+  created_at timestamp with time zone default now()
+);
+
+create table returns (
+  id bigint primary key generated always as identity,
+  order_id bigint references orders (id),
+  reason text not null,
+  status text not null,
+  created_at timestamp with time zone default now()
+);
+
+create table notifications (
+  id bigint primary key generated always as identity,
+  user_id bigint references users (id),
+  message text not null,
+  created_at timestamp with time zone default now()
+);

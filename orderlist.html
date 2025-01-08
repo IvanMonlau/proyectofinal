@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order list</title>
+  <link rel="stylesheet" href="orderlist.css">
+  <link rel="stylesheet" href="bar.css">
+  <link rel="icon" href="https://www.langantiques.com/university/wp-content/uploads/2019/03/WinklerIgnaz.png  ">
+
+</head>
+<body>
+    <div class="container">
+        <div class="button-panel">
+          <a href="home.html"><button>Dashboard</button></a>
+          <a href="products.html"><button>Products</button></a>
+          <a href="inbox.html"><button>Inbox</button></a>
+          <a href="orderlist.html"><button>Order list</button></a>
+          <a href="login.html"><button>LOGOUT</button></a>
+        </div>
+  <div class="container">
+    <h1>Lista de Pedidos</h1>
+    <div class="filters">
+      <select>
+        <option value="filter_by">Filtrar por</option>
+        <option value="date">Fecha</option>
+        <option value="type">Tipo</option>
+        <option value="status">Estado</option>
+      </select>
+      <select>
+        <option value="order_type">Tipo de Pedido</option>
+        </select>
+      <select>
+        <option value="order_status">Estado del Pedido</option>
+        </select>
+      <button>Restablecer Filtro</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Dirección</th>
+          <th>Fecha</th>
+          <th>Tipo</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>00001</td>
+          <td>Christine Brooks</td>
+          <td>089 Kutch Green Apt. 448</td>
+          <td>04 Sep 2022</td>
+          <td>Electric</td>
+          <td class="completed">Completed</td>
+        </tr>
+        </tbody>
+        <tbody>
+            <tr>
+              <td>00002</td>
+              <td>Christine Brooks</td>
+              <td>089 Kutch Green Apt. 448</td>
+              <td>04 Sep 2023</td>
+              <td>Electric</td>
+              <td class="processing">Completed</td>
+            </tr>
+            
+        </tbody>
+        <tbody>
+            <tr>
+              <td>00003</td>
+              <td>Christine Brooks</td>
+              <td>089 Kutch Green Apt. 448</td>
+              <td>04 Sep 2024</td>
+              <td>Electric</td>
+              <td class="canceled">Completed</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagination">
+      <button>Anterior</button>
+      <span>Mostrando 1-9 de 78</span>
+      <button>Siguiente</button>
+    </div>
+  </div>
+</body>
+</html>
